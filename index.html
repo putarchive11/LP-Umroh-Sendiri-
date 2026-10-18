@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Benang Waktu — Novel oleh Ardhana Kirana</title>
+    <meta
+      name="description"
+      content="Benang Waktu, novel fantasi-sejarah tentang penenun yang bisa menjahit ulang masa lalu. Pesan edisi Paperback, Hardcover, atau Collector sekarang."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,700;0,800;1,500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <canvas id="dust" aria-hidden="true"></canvas>
+
+    <!-- ================= NAV ================= -->
+    <header class="nav" id="nav">
+      <a href="#top" class="brand">
+        <span class="brand-icon">W</span>
+        <span>WEAVELAB <em>Press</em></span>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#preview">Cuplikan</a>
+        <a href="#fitur">Keunggulan</a>
+        <a href="#edisi">Edisi</a>
+        <a href="#penulis">Penulis</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+
+      <a href="#edisi" class="btn btn-gold btn-sm">Pesan Sekarang</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Buka menu">
+        <span></span><span></span>
+      </button>
+    </header>
+
+    <main id="top">
+      <!-- ================= HERO ================= -->
+      <section class="hero">
+        <div class="hero-copy reveal">
+          <span class="eyebrow">Novel Baru · Pre-order dibuka</span>
+          <h1>
+            Setiap helai benang<br />
+            menyimpan <i>satu masa lalu</i>.
+          </h1>
+          <p class="lead">
+            <b>Benang Waktu</b> adalah kisah Laras, penenun muda dari Kotagede
+            yang menemukan bahwa kain tenunnya bisa menjahit ulang sejarah —
+            dengan harga yang harus dibayar oleh orang-orang yang ia cintai.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#edisi" class="btn btn-gold">Pesan Mulai Rp129.000</a>
+            <a href="#preview" class="btn btn-ghost">Baca Cuplikan</a>
+          </div>
+
+          <ul class="hero-meta">
+            <li><strong>4.9</strong><span>★ 2.140 ulasan</span></li>
+            <li><strong>412</strong><span>halaman</span></li>
+            <li><strong>#1</strong><span>Fiksi Terlaris</span></li>
+          </ul>
+        </div>
+
+        <div class="hero-stage reveal" id="heroStage">
+          <div class="stage-glow"></div>
+          <div class="stage-ring"></div>
+
+          <div class="book-rig" id="heroRig">
+            <div class="book3d hero-book" id="heroBook">
+              <div class="b-face b-front">
+                <div class="cover cover-midnight">
+                  <div class="cover-frame">
+                    <span class="cover-kicker">Sebuah Novel</span>
+                    <svg class="cover-thread" viewBox="0 0 120 120" aria-hidden="true">
+                      <circle cx="60" cy="60" r="44" />
+                      <circle cx="60" cy="60" r="30" />
+                      <path d="M10 60 C 35 20, 85 100, 110 60" />
+                      <path d="M60 10 C 20 35, 100 85, 60 110" />
+                    </svg>
+                    <h2 class="cover-title">Benang<br />Waktu</h2>
+                    <span class="cover-author">Ardhana Kirana</span>
+                  </div>
+                </div>
+                <div class="cover-inside">
+                  <p>Untuk Ibu,<br />yang mengajariku bahwa<br />setiap simpul adalah doa.</p>
+                </div>
+              </div>
+              <div class="b-face b-first-page">
+                <span class="page-chapter">Bab Satu</span>
+                <h3>Simpul Pertama</h3>
+                <p>
+                  Malam itu alat tenun Nenek berbunyi sendiri. Laras berdiri di
+                  ambang pintu, memandangi benang merah yang bergerak tanpa
+                  tangan…
+                </p>
+              </div>
+              <div class="b-face b-back cover-midnight">
+                <p>“Magis, menyayat, dan tak bisa diletakkan.”</p>
+                <span>— Kompas Literasi</span>
+              </div>
+              <div class="b-face b-spine cover-midnight">
+                <span>BENANG WAKTU</span>
+                <small>W</small>
+              </div>
+              <div class="b-face b-pages b-pages-right"></div>
+              <div class="b-face b-pages b-pages-top"></div>
+              <div class="b-face b-pages b-pages-bottom"></div>
+            </div>
+            <div class="book-shadow"></div>
+          </div>
+
+          <div class="stage-controls">
+            <button class="chip" id="openBookBtn">Buka Sampul</button>
+            <span class="chip-hint">Geser untuk memutar buku</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= MARQUEE ================= -->
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee-track">
+          <span>Kompas Literasi</span><i>✦</i>
+          <span>Majalah Tempo Buku</span><i>✦</i>
+          <span>Festival Pembaca Ubud</span><i>✦</i>
+          <span>Goodreads Choice</span><i>✦</i>
+          <span>Jakarta Book Review</span><i>✦</i>
+          <span>Kompas Literasi</span><i>✦</i>
+          <span>Majalah Tempo Buku</span><i>✦</i>
+          <span>Festival Pembaca Ubud</span><i>✦</i>
+          <span>Goodreads Choice</span><i>✦</i>
+          <span>Jakarta Book Review</span><i>✦</i>
+        </div>
+      </div>
+
+      <!-- ================= FLIPBOOK PREVIEW ================= -->
+      <section class="section" id="preview">
+        <div class="section-head reveal">
+          <span class="eyebrow">Cuplikan Interaktif</span>
+          <h2>Balik halamannya. <i>Rasakan ceritanya.</i></h2>
+          <p>
+            Baca beberapa halaman pertama langsung di sini. Klik halaman atau
+            gunakan tombol panah untuk membalik.
+          </p>
+        </div>
+
+        <div class="flip-wrap reveal">
+          <div class="flipbook" id="flipbook"></div>
+
+          <div class="flip-controls">
+            <button class="round-btn" id="flipPrev" aria-label="Halaman sebelumnya">←</button>
+            <span id="flipStatus">Sampul</span>
+            <button class="round-btn" id="flipNext" aria-label="Halaman berikutnya">→</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= FEATURES ================= -->
+      <section class="section" id="fitur">
+        <div class="section-head reveal">
+          <span class="eyebrow">Kenapa Pembaca Jatuh Cinta</span>
+          <h2>Lebih dari sekadar buku.</h2>
+        </div>
+
+        <div class="feature-grid">
+          <article class="tilt-card reveal">
+            <div class="card-icon">✦</div>
+            <h3>Dunia yang Hidup</h3>
+            <p>
+              Yogyakarta tahun 1740 hingga 2024, dirajut dalam satu kisah yang
+              berpindah zaman tanpa kehilangan arah.
+            </p>
+          </article>
+          <article class="tilt-card reveal">
+            <div class="card-icon">❦</div>
+            <h3>Riset Mendalam</h3>
+            <p>
+              Tiga tahun riset bersama perajin tenun lurik dan sejarawan lokal
+              untuk detail yang autentik.
+            </p>
+          </article>
+          <article class="tilt-card reveal">
+            <div class="card-icon">◈</div>
+            <h3>Ilustrasi Eksklusif</h3>
+            <p>
+              24 ilustrasi motif tenun dan peta yang digambar tangan di awal
+              setiap bab.
+            </p>
+          </article>
+          <article class="tilt-card reveal">
+            <div class="card-icon">♫</div>
+            <h3>Audiobook Gratis</h3>
+            <p>
+              Setiap pembelian mendapat kode akses audiobook 11 jam yang
+              dibacakan langsung oleh penulis.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- ================= EDITIONS ================= -->
+      <section class="section" id="edisi">
+        <div class="section-head reveal">
+          <span class="eyebrow">Pilih Edisimu</span>
+          <h2>Tiga edisi, satu kisah.</h2>
+          <p>Semua edisi pre-order dikirim bertanda tangan penulis.</p>
+        </div>
+
+        <div class="edition-grid" id="editionGrid"></div>
+      </section>
+
+      <!-- ================= TESTIMONIALS ================= -->
+      <section class="section">
+        <div class="section-head reveal">
+          <span class="eyebrow">Kata Pembaca</span>
+          <h2>Ditulis ulang di hati ribuan orang.</h2>
+        </div>
+
+        <div class="quote-grid">
+          <figure class="quote tilt-card reveal">
+            <blockquote>
+              “Saya membacanya dalam satu malam dan menangis di halaman 318.
+              Belum pernah ada novel lokal yang terasa semegah ini.”
+            </blockquote>
+            <figcaption><b>Nadia P.</b> · Bandung</figcaption>
+          </figure>
+          <figure class="quote tilt-card reveal">
+            <blockquote>
+              “Cara penulis menggambarkan tenun sebagai bahasa waktu itu
+              jenius. Edisi hardcover-nya cantik sekali.”
+            </blockquote>
+            <figcaption><b>Raka W.</b> · Surabaya</figcaption>
+          </figure>
+          <figure class="quote tilt-card reveal">
+            <blockquote>
+              “Buku yang membuat saya menelepon nenek saya keesokan harinya.
+              Hangat, magis, dan sangat Indonesia.”
+            </blockquote>
+            <figcaption><b>Dewi A.</b> · Makassar</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- ================= AUTHOR ================= -->
+      <section class="section author" id="penulis">
+        <div class="author-portrait reveal">
+          <div class="portrait-card tilt-card">
+            <div class="portrait-initials">AK</div>
+          </div>
+        </div>
+        <div class="author-copy reveal">
+          <span class="eyebrow">Tentang Penulis</span>
+          <h2>Ardhana Kirana</h2>
+          <p>
+            Lahir dan besar di Kotagede, Ardhana tumbuh di antara suara alat
+            tenun milik neneknya. Setelah dua kumpulan cerpen yang diakui
+            kritikus, <i>Benang Waktu</i> adalah novel pertamanya — hasil lima
+            tahun menulis dan tiga tahun riset.
+          </p>
+          <ul class="author-stats">
+            <li><strong>3</strong><span>buku terbit</span></li>
+            <li><strong>120rb+</strong><span>eksemplar terjual</span></li>
+            <li><strong>6</strong><span>bahasa terjemahan</span></li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ================= FAQ ================= -->
+      <section class="section" id="faq">
+        <div class="section-head reveal">
+          <span class="eyebrow">Pertanyaan Umum</span>
+          <h2>Ada yang ingin ditanyakan?</h2>
+        </div>
+
+        <div class="faq-list reveal">
+          <details>
+            <summary>Kapan buku pre-order dikirim?</summary>
+            <p>
+              Pengiriman gelombang pertama dimulai 15 Oktober 2026. Kamu akan
+              menerima nomor resi melalui email dan WhatsApp.
+            </p>
+          </details>
+          <details>
+            <summary>Apakah tersedia versi e-book?</summary>
+            <p>
+              Ya. E-book tersedia di Google Play Books dan Gramedia Digital
+              mulai hari yang sama dengan rilis cetak.
+            </p>
+          </details>
+          <details>
+            <summary>Bagaimana cara mendapatkan audiobook gratis?</summary>
+            <p>
+              Kode akses tercetak di halaman terakhir setiap buku. Tukarkan di
+              aplikasi WEAVELAB Listen.
+            </p>
+          </details>
+          <details>
+            <summary>Apakah bisa kirim ke luar negeri?</summary>
+            <p>
+              Bisa, kami mengirim ke 40+ negara. Ongkos kirim dihitung
+              otomatis saat checkout.
+            </p>
+          </details>
+        </div>
+      </section>
+
+      <!-- ================= CTA ================= -->
+      <section class="cta reveal">
+        <div class="cta-books" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </div>
+        <h2>Mulai rajut ceritamu hari ini.</h2>
+        <p>Pre-order berakhir dalam waktu terbatas — stok bertanda tangan hanya 2.000 eksemplar.</p>
+        <a href="#edisi" class="btn btn-gold">Pesan Benang Waktu</a>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="brand">
+        <span class="brand-icon">W</span>
+        <span>WEAVELAB <em>Press</em></span>
+      </div>
+      <p>© 2026 WEAVELAB Press. Semua hak dilindungi.</p>
+    </footer>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
